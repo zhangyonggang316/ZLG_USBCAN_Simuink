@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mask>
+  <Type>ZLG_USBCANGo</Type>
+  <Display IconOpaque="transparent" RunInitForIconRedraw="off">disp(&apos;ZLG_USBCANGo&apos;);
+port_label(&apos;input&apos;,1,&apos;can_T&apos;);
+</Display>
+  <Description>###周立功 USBCAN-Ⅱ发送模块###
+
+DeviceType（设备编号）：USBCAN-Ⅱ（4）；
+DeviceInd（通道号）：0或1（0代表第一个can接口）；
+ID（can报文ID）：0x00000000（十六进制格式，扩展帧）；
+BaudRate（波特率）：250（默认250K）
+OutputBusName（输出结构体）：CAN_MESSAGE_BUS（can标准格式）
+
+Tip：其它can设备编号请查询附带资料。ID过滤仅支持填写一个。波特率目前仅支持250 500 1000.</Description>
+  <DialogControl Type="Group" Name="DescGroupVar">
+    <Prompt>ZLG_USBCANGo</Prompt>
+    <DialogControl Type="Text" Name="DescTextVar">
+      <Prompt>%&lt;MaskDescription&gt;</Prompt>
+    </DialogControl>
+    <DialogControl Type="Hyperlink" Name="SourceCodeLink">
+      <Prompt>源代码</Prompt>
+      <Callback>edit(&apos;ZLG_USBCANGo&apos;);</Callback>
+    </DialogControl>
+  </DialogControl>
+  <DialogControl Type="Group" Name="SectionGroup0_Section1">
+    <Prompt>Simulink:studio:ToolBarParametersMenu</Prompt>
+    <ControlOptions AlignPrompts="on"/>
+    <DialogControl Type="Edit" Name="DeviceType">
+      <Prompt>DeviceType:</Prompt>
+      <ControlOptions PromptLocation="left" DefaultValue="4"/>
+    </DialogControl>
+    <DialogControl Type="Edit" Name="DeviceInd">
+      <Prompt>DeviceInd:</Prompt>
+      <ControlOptions PromptLocation="left" DefaultValue="0"/>
+    </DialogControl>
+    <DialogControl Type="Edit" Name="ID">
+      <Prompt>ID:</Prompt>
+      <ControlOptions PromptLocation="left" DefaultValue="0x00000000"/>
+    </DialogControl>
+    <DialogControl Type="Edit" Name="BaudRate">
+      <Prompt>BaudRate:</Prompt>
+      <ControlOptions PromptLocation="left" DefaultValue="250"/>
+    </DialogControl>
+    <DialogControl Type="Edit" Name="OutputBusName">
+      <Prompt>OutputBusName:</Prompt>
+      <ControlOptions PromptLocation="left" Visible="off" NeverSave="on" ReadOnly="on" Hidden="on" DefaultValue="CAN_MESSAGE_BUS"/>
+    </DialogControl>
+  </DialogControl>
+  <DialogControl Type="Panel" Name="SectionGroup0_Section2">
+    <ControlOptions AlignPrompts="on"/>
+    <DialogControl Type="Popup" Name="SimulateUsing">
+      <Prompt>仿真方式:</Prompt>
+      <Tooltip>SystemBlock:MATLABSystem:SimulateUsingDescription</Tooltip>
+      <ControlOptions PromptLocation="left" NeverSave="on" ReadOnly="on" DefaultValue="Interpreted execution"/>
+    </DialogControl>
+  </DialogControl>
+</Mask>
