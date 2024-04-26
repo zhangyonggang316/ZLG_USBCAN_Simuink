@@ -1,0 +1,2 @@
+# ZLG_USBCAN_Simuink
+创建了周立功USBCAN设备的驱动库，simulink模型可以直接添加模块，驱动硬件进行can报文的收发。
