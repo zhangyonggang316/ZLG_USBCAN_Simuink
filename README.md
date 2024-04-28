@@ -4,8 +4,8 @@
 使用周立功的接口做一个USBCAN驱动模块，能够实现模型仿真期间驱动can盒，实现接收和发送can报文。  
 
 ## **库的下载和安装**
-直接下载ZLG—USBCAN.mltbx文件，把文件夹中ZLG—USBCAN.mltbx文件拖拽到matlab命令窗口，安装完成。
-或者下载文件夹，里面也有这个文件。
+直接下载ZLG—USBCAN.mltbx文件，把ZLG—USBCAN.mltbx文件拖拽到matlab命令窗口，安装完成。
+或者下载源文件，里面也有这个文件。
 ![image](Picture/PixPin_2024-04-28_08-34-48.png)
 
 **附加功能管理器，可以查看安装的工具箱：**
